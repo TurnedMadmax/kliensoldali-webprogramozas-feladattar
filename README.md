@@ -23,3 +23,5 @@ npm start
 ## Feladatsablon (oktatóknak)
 
 Új feladat létrehozásához a `react-template` mappáról kell másolatot készíteni.
+
+<!-- npx @jaw52/transform-jsx-for-vite -->
