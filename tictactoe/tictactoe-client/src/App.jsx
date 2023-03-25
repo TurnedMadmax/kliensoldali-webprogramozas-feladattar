@@ -1,22 +1,25 @@
-import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router';
-import './App.css';
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router";
+import "./App.css";
 
 //TODO: socket létrehozása
 
 function App() {
-  const [game, setGame] = useState(Array(9).fill(''));
+  const [game, setGame] = useState(Array(9).fill(""));
   const [turnNumber, setTurnNumber] = useState(0);
   const [myTurn, setMyTurn] = useState(true);
   const [winner, setWinner] = useState(false);
-  const [xo, setXO] = useState('X');
-  const [player, setPlayer] = useState('');
+  const [xo, setXO] = useState("X");
+  const [player, setPlayer] = useState("");
   const [hasOpponent, setHasOpponent] = useState(false);
   const [share, setShare] = useState(false);
 
   const location = useLocation();
   const params = new URLSearchParams(location.search);
-  const paramsRoom = params.get('room');
+  const paramsRoom = params.get("room");
   const [room, setRoom] = useState(paramsRoom);
 
   const [turnData, setTurnData] = useState(false);
@@ -32,7 +35,7 @@ function App() {
   };
 
   const restart = () => {
-    setGame(Array(9).fill(''));
+    setGame(Array(9).fill(""));
     setWinner(false);
     setTurnNumber(0);
     setMyTurn(false);
@@ -40,13 +43,13 @@ function App() {
 
   useEffect(() => {
     combinations.forEach((c) => {
-      if (game[c[0]] === game[c[1]] && game[c[0]] === game[c[2]] && game[c[0]] !== '') {
+      if (game[c[0]] === game[c[1]] && game[c[0]] === game[c[2]] && game[c[0]] !== "") {
         setWinner(true);
       }
     });
 
     if (turnNumber === 0) {
-      setMyTurn(xo === 'X' ? true : false);
+      setMyTurn(xo === "X" ? true : false);
     }
   }, [game, turnNumber, xo]);
 
@@ -88,9 +91,9 @@ function App() {
       ) : null}
       <br />
       <br />
-      Turn: {myTurn ? 'You' : 'Opponent'}
+      Turn: {myTurn ? "You" : "Opponent"}
       <br />
-      {hasOpponent ? '' : 'Waiting for opponent...'}
+      {hasOpponent ? "" : "Waiting for opponent..."}
       <p>
         {winner || turnNumber === 9 ? (
           <button className="btn" onClick={sendRestart}>
@@ -138,7 +141,7 @@ const combinations = [
 ];
 
 const random = () => {
-  return Array.from(Array(8), () => Math.floor(Math.random() * 36).toString(36)).join('');
+  return Array.from(Array(8), () => Math.floor(Math.random() * 36).toString(36)).join("");
 };
 
 export default App;
