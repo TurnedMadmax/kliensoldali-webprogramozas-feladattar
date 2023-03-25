@@ -9,8 +9,8 @@ const Card = ({ onClick, url, flipped }) => (
   </div>
 );
 
-Card.prototypes = {
-  flip: PropTypes.bool,
+Card.propTypes = {
+  flipped: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
   url: PropTypes.string.isRequired,
 };

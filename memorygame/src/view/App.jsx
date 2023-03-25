@@ -24,7 +24,7 @@ const App = () => {
 
   return (
     <Board>
-      {catImages.map(({ id, url }, idx) => (
+      {catImages.map(({ url }, idx) => (
         <Card key={idx} flipped={isFlipped(idx)} onClick={() => flip(idx)} url={url} />
       ))}
     </Board>
