@@ -1,5 +1,3 @@
-import React from "react";
-
 import { PlaylistForm } from "./PlaylistForm";
 import { PlaylistList } from "./PlaylistList";
 import { TrackList } from "./TrackList";
@@ -23,10 +21,7 @@ export const Playlists = () => {
         <div className="ui six wide column">
           <h3>Playlists</h3>
           <PlaylistForm />
-          <PlaylistList
-            playlists={playlists}
-            selectedPlaylistId={selectedPlaylistId}
-          />
+          <PlaylistList playlists={playlists} selectedPlaylistId={selectedPlaylistId} />
         </div>
         <div className="ui ten wide column">
           <TrackList />

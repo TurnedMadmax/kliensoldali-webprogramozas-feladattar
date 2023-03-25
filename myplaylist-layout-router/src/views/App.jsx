@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Playlists } from "./playlists/Playlists";
 import { Home } from "./home/Home";
 import { Tracks } from "./tracks/Tracks";

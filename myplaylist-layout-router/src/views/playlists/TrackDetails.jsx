@@ -1,4 +1,4 @@
-import React from "react";
+import bonjovi from "../../assets/bonjovi.jpg";
 
 export function TrackDetails() {
   return (
@@ -6,7 +6,7 @@ export function TrackDetails() {
       <div className="ui items">
         <div className="item">
           <div className="image">
-            <img src="" alt="" />
+            <img src={bonjovi} alt="" />
           </div>
           <div className="content">
             <div className="header">Track title</div>
