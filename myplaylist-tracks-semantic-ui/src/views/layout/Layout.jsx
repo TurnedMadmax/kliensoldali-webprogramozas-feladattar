@@ -1,5 +1,4 @@
-import React from 'react';
-
+/* eslint-disable react/prop-types */
 import { Menu } from "../menu/Menu";
 
 export function Layout({ children }) {
@@ -8,5 +7,5 @@ export function Layout({ children }) {
       <Menu />
       {children}
     </div>
-  )
+  );
 }
