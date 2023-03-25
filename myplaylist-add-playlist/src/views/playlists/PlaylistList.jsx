@@ -1,5 +1,4 @@
-import React from "react";
-
+/* eslint-disable react/prop-types */
 export function PlaylistList({ playlists }) {
   return (
     <div className="ui very relaxed selection list">
