@@ -1,7 +1,7 @@
 import React from "react";
 import App from "./views/App";
-import "./grafilogika.css";
 import "./index.css";
+import "./grafilogika.css";
 import { createRoot } from "react-dom/client";
 // import { store } from "./state/store";
 // import { Provider } from "react-redux";
