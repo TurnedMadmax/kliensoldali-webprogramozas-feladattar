@@ -13,7 +13,7 @@ A feladatban komponensekre bontva szerepel egy alkalmazás. Az egyes komponensek
    1. Telepítsd fel ehhez a react-router-dom csomagot. [Használd a dokumentációt is!](https://reactrouter.com/docs/en/v6)
    2. Segítségével oldd meg, hogy az egyes végpontokon a megfelelő komponensek jelenjenek meg. Ehhez a `BrowserRouter`, a `Routes` és a `Route` komponenseket kell használnod.
    3. Tedd működőképessé a menüt! Cseréld ki a linkeket `Link` vagy sokkal inkább `NavLink` komponensekre!
-   4. Próbáld meg a `Layout` komponenst legfelsőbb szintű route-ként használni, és benne szereplő route-okkal megjeleníteni az oldalakat. Ehhez az `Outlet` komponensre is szükséged lesz a `Layout`-on belül.
+   4. Próbáld meg a `Layout` komponenst legfelsőbb szintű route-ként használni, és benne szereplő route-okkal megjeleníteni az oldalakat. Ehhez az `Outlet` komponensre is szükséged lesz a `Layout`-on belül. Oldd meg, hogy a `<Home>` komponens legyen az alapértelmezett (`index` prop) és ismeretlen végpontnál irányítson erre az oldalra (`<Navigate>` komponens)!
 3. A `Playlists` komponens egyelőre beégetve tartalmazza, melyik playlist van kiválasztva. Konstans adat helyett alakítsd át state-é, és egy playlistre kattintással változtassuk meg a kiválasztott playlist-et.
 4. Tüntessük fel az URL-ben, hogy a playlists oldalon melyik playlist van kiválasztva: pl. `/playlists/1`!
    1. Használd a router `useParams` hook-ját a paraméter kiolvasásához! Ügyelj arra, hogy ez szövegként érkezik, és még számmá kell alakítanod!
