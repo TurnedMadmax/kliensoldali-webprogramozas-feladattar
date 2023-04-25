@@ -1,5 +1,13 @@
 import {Hello} from "./Hello";
 
 export function App() {
-  return <Hello />
+  return(
+    <Hello name="Győző" count="3">
+      <span>children</span>
+    </Hello>
+
+
+  ) 
+  
+  
 }

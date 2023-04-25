@@ -1,21 +1,19 @@
-export function Hello() {
 
-  const count = 3; 
-  const name = "Lili";
+export function Hello( {name, count, children } ) {
+
+  count = isNaN(parseInt(count)) ? 1 : parseInt(count);
+  //const count = 3; 
+  //const name = "Lili";
 
 
   //return <h1>Hello {name.length === 0 ? 'Nincs kit üdvozölni' : name} </h1>
 
   // Kicsit szebben az előző sor
   return (
-      <div>
+      <>
         {
-            // Csinálok egy arrayt, count hosszút, amit feltöltök nullával
-            // A mapel végig megyek
-            // i a hányadik indexen vagyok
-            // Egyedi kulcsot kell adni -> key
-            // 
-            new Array(count).fill(null).map( (_, i) => (
+            new Array(count).fill(null).map( (element, i) => (
+
                 <h1 key={i}>{
                     name.length === 0
                     ? "Nincs kit üdvozölni"
@@ -23,9 +21,12 @@ export function Hello() {
                 }</h1>
             ))
         }
+        {
+          children
+        }
       
-      </div>
-    );
+      </>
+  );
     
   
 }
